@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+  cusrsor: pointer;
+}
