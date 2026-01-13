@@ -40,13 +40,22 @@ export function AuthProvider({ children }) {
         const token = Cookies.get("token");
         const isAuthPage = pathname.startsWith("/login") || pathname.startsWith("/register") || pathname.startsWith("/ai/login") || pathname.startsWith("/ai/register");
         const isPublicPage = isAuthPage || pathname === "/" || pathname === "/home" || pathname === "/ai/home";
+        const isAiPage = pathname.startsWith("/ai/");
 
-        if (!loading && !token && !isPublicPage) {
+        if (!loading && !token && !isPublicPage && !isAiPage) {
             router.push("/login");
         }
 
-        if (!loading && token && isAuthPage) {
+        if (!loading && !token && !isPublicPage && isAiPage) {
+            router.push("/ai/login");
+        }
+
+        if (!loading && token && isAuthPage && !isAiPage) {
             router.push("/dashboard");
+        }
+
+        if (!loading && token && isAuthPage && isAiPage) {
+            router.push("/ai/dashboard");
         }
     }, [loading, pathname, router]);
 

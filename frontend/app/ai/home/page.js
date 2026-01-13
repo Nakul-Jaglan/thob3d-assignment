@@ -7,7 +7,7 @@ import AiHeader from '@/components/aiHeader';
 const GridBackground = () => (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
-            className="absolute inset-0 opacity-[0.15]" 
+            className="absolute inset-0 opacity-[0.95]" 
             style={{ 
                 backgroundImage: 'radial-gradient(#3f3f46 1px, transparent 1px)', 
                 backgroundSize: '24px 24px' 
@@ -57,7 +57,7 @@ export default function AiHomePage() {
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm text-xs text-zinc-400 mb-8 font-mono">
                             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                            SYSTEM OPERATIONAL // V.2.0.4
+                            SYSTEM OPERATIONAL // V.1.0.0
                         </div>
                         
                         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
@@ -87,17 +87,17 @@ export default function AiHomePage() {
             </section>
 
             {/* Stats Band */}
-            <section className="border-b border-zinc-900 bg-zinc-950/50">
+            {/* <section className="border-b border-zinc-900 bg-zinc-950/50">
                 <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
                     <StatItem value="99.9%" label="Uptime" />
                     <StatItem value="<0.1ms" label="Latency" />
                     <StatItem value="AES-256" label="Encryption" />
                     <StatItem value="Global" label="CDN Nodes" />
                 </div>
-            </section>
+            </section> */}
 
             {/* Features Grid */}
-            <section className="py-24 px-6 relative">
+            {/* <section className="py-24 px-6 relative">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-16">
                         <h2 className="text-3xl font-bold text-white mb-4">Core Protocols</h2>
@@ -146,10 +146,10 @@ export default function AiHomePage() {
                         />
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* CTA Section */}
-            <section className="py-24 px-6 border-t border-zinc-900 bg-zinc-950">
+            {/* <section className="py-24 px-6 border-t border-zinc-900 bg-zinc-950">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl font-bold text-white mb-6">Ready to deploy?</h2>
                     <p className="text-zinc-500 mb-8 mx-auto max-w-xl">
@@ -165,19 +165,19 @@ export default function AiHomePage() {
                         </motion.button>
                     </Link>
                 </div>
-            </section>
+            </section> */}
 
             {/* Footer */}
-            <footer className="border-t border-zinc-900 py-12 px-6 bg-black">
+            <footer className="border-t border-zinc-900 py-6 px-6 bg-black">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-zinc-500 font-mono text-xs">
-                        © 2026 THOB AI SYSTEMS. ALL RIGHTS RESERVED.
+                        © {new Date().getFullYear()} THOB SYSTEMS. ALL RIGHTS RESERVED.
                     </div>
-                    <div className="flex gap-6 text-zinc-500 font-mono text-xs">
+                    {/* <div className="flex gap-6 text-zinc-500 font-mono text-xs">
                         <Link href="#" className="hover:text-zinc-300">PRIVACY_PROTOCOL</Link>
                         <Link href="#" className="hover:text-zinc-300">TERMS_OF_SERVICE</Link>
                         <Link href="#" className="hover:text-zinc-300">STATUS</Link>
-                    </div>
+                    </div> */}
                 </div>
             </footer>
         </div>

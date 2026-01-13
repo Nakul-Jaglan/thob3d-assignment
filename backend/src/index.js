@@ -11,7 +11,11 @@ dotenv.config();
 
 app.use(express.json());
 
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
+
+app.get('/', (req, res) => {
+    res.json('Welcome to the Asset Management API');
+});
 
 app.use('/api/users', userRouter);
 app.use('/api/auth', authRouter);

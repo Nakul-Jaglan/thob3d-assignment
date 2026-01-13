@@ -15,7 +15,8 @@ function AiHeader() {
     }
 
     const navLinks = [
-        { href: '/ai/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+        { href: '/ai/home', label: 'Home', icon: Cpu },
+        { href: '/ai/dashboard', label: 'Dashboard', icon: LayoutDashboard }
     ];
 
     return (
@@ -29,7 +30,7 @@ function AiHeader() {
                     <div className="p-1.5 bg-zinc-900 border border-zinc-800 rounded-lg group-hover:border-zinc-700 transition-colors">
                         <Cpu className="w-5 h-5 text-zinc-100" />
                     </div>
-                    <span className="text-lg font-medium text-zinc-100 font-mono tracking-tight">THOB<span className="text-zinc-500">_AI</span></span>
+                    <span className="text-lg font-medium text-zinc-100 font-mono tracking-tight">THOB</span>
                 </Link>
 
                 <nav className="hidden md:flex items-center gap-1">
