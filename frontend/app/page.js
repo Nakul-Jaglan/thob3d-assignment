@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col items-center justify-around p-10">
+      <main className="flex flex-col items-center justify-around p-10 min-h-[85vh]">
         <section className="pb-10">
           <h1 className="text-left md:text-center text-4xl font-bold pb-10">Welcome to the Internship Assignment Project of Thob 3D Studios</h1>
           <p className="text-lg">I have built two sections for this project:</p>
@@ -39,6 +39,14 @@ export default function Home() {
           </Link>
         </div>
       </main>
+
+      <footer>
+        <div className="text-center p-5 border-t mt-10">
+          <p className="text-lg text-gray-500">
+            Built with ❤️ by <Link href="https://nakul.fun" target="_blank" className="text-blue-500 hover:underline">Nakul</Link>
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
