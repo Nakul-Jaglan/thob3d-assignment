@@ -1,11 +1,13 @@
 "use client"
-import {useEffect} from 'react'
-import Router from 'next/router'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 function HomePage() {
+    const router = useRouter()
+    
     useEffect(() => {
-        Router.replace('/dashboard');
-    }, [])
+        router.replace('/dashboard');
+    }, [router])
 
   return (
     <div>HomePage</div>
